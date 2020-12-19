@@ -807,9 +807,9 @@ public class TownCommand extends BaseCommand implements CommandExecutor, TabComp
 					return;
 				}
 				if (newSplit.length >= 2) { // /invite deny args[1]
-					try {
-						nation = TownyUniverse.getInstance().getDataSource().getNation(newSplit[1]);
-					} catch (NotRegisteredException e) {
+					nation = TownyUniverse.getInstance().getNation(newSplit[1]);
+					
+					if (nation == null) {
 						TownyMessaging.sendErrorMsg(player, Translation.of("msg_invalid_name"));
 						return;
 					}
@@ -848,9 +848,9 @@ public class TownCommand extends BaseCommand implements CommandExecutor, TabComp
 					return;
 				}
 				if (newSplit.length >= 2) { // /invite deny args[1]
-					try {
-						nation = TownyUniverse.getInstance().getDataSource().getNation(newSplit[1]);
-					} catch (NotRegisteredException e) {
+					nation = TownyUniverse.getInstance().getNation(newSplit[1]);
+					
+					if (nation == null) {
 						TownyMessaging.sendErrorMsg(player, Translation.of("msg_invalid_name"));
 						return;
 					}

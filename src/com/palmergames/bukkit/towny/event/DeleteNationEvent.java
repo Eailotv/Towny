@@ -21,7 +21,7 @@ public class DeleteNationEvent extends TownyObjDeleteEvent  {
 	}
 
     public DeleteNationEvent(Nation nation) {
-        super(nation.getName(), nation.getUuid(), nation.getRegistered());
+        super(nation.getName(), nation.getUUID(), nation.getRegistered());
     }
 
     /**
