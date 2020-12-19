@@ -816,6 +816,14 @@ public class TownyUniverse {
 		}
 	}
 
+	/**
+	 * Get direct access to the internal nation map.
+	 * 
+	 * @return direct access to internal nation map.
+	 * 
+	 * @deprecated It is not safe, nor recommended, to directly access the internal nation map. 
+	 */
+	@Deprecated
 	public Map<String, Nation> getNationsMap() {
 		return nationNameMap;
 	}
